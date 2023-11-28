@@ -1,0 +1,58 @@
+<html> 
+<form action=slip30.php method=get> 
+Enter Comp. Name<input type=text name=t1><br> 
+<input type=submit value="Display Ranker"> 
+</form> 
+</html> 
+<?php 
+$con=pg_connect("host=localhost user=postgres password=nrc dbname=slip30"); 
+$cn=$_GET['t1']; 
+$rs=pg_query($con,"select * from student,competition,stud_comp where cname='$cn' 
+and srank=1 and id=sid and competition.cno=stud_comp.cno"); 
+while($row=pg_fetch_array($rs)) 
+{ 
+ echo "$row[0] $row[1] $row[2]<br>"; 
+} 
+?>
+from matplotlib import pyplot as plt
+import numpy as np
+Subject = ['OS', 'FDS', 'Block chain','Android', 'Python', 'CPP']
+marks = [65, 63, 73, 80, 75, 63]
+fig = plt.figure(figsize =(10, 7))
+plt.pie(marks,labels = Subject)
+plt.show()
+
+import numpy as np
+import matplotlib.pyplot as plt
+# Generate a random array of 50 integers
+random_array = np.random.randint(0, 100, 60)
+# Line chart
+plt.figure()
+plt.plot(random_array, color='blue')
+plt.title('Line Chart')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.show()
+# Scatter plot
+plt.figure()
+plt.scatter(range(len(random_array)), random_array, color='red')
+plt.title('Scatter Plot')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.show()
+# Histogram
+plt.figure()
+plt.hist(random_array, color='green', edgecolor='black')
+plt.title('Histogram')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+# Box plot
+plt.figure()
+plt.boxplot(random_array, vert=False)
+plt.title('Box Plot')
+plt.xlabel('Value')
+plt.show()
+plt.figure()
+plt.bar(range(len(random_array)),random_array,color='green',width=0.4)
+plt.show()

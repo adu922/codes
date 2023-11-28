@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Table</title>
+ <style>
+ table{
+ border-collapse: collapse;
+ text-align: center;
+ } 
+ h5{
+ margin-left:95px;
+ margin-bottom: 10px; }
+ </style>
+</head>
+<body>
+ <table border="1px solid black">
+ <h5>List of Books </h5>
+ <tr>
+ <td rowspan="2"><b>Item no </b></td>
+ <td rowspan="2">Item name</td>
+ <td colspan="2">Price</td>
+ </tr>
+ <tr>
+ <td>Rs</td>
+ <td>Paise</td>
+ </tr>
+ <tr>
+ <td>1</td>
+ <td>Programming In Python</td>
+ <td>500</td>
+ <td>50</td>
+ </tr>
+ <tr>
+ <td>2</td>
+ <td>Programming In Java</td>
+ <td>345</td>
+ <td>00</td>
+ </tr>
+ </table>
+</body>
+</html>
+
+import numpy as np
+import matplotlib.pyplot as plt
+# Generate a random array of 50 integers
+random_array = np.random.randint(0, 100, 60)
+# Line chart
+plt.figure()
+plt.plot(random_array, color='blue')
+plt.title('Line Chart')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.show()
+# Scatter plot
+plt.figure()
+plt.scatter(range(len(random_array)), random_array, color='red')
+plt.title('Scatter Plot')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.show()
+# Histogram
+plt.figure()
+plt.hist(random_array, color='green', edgecolor='black')
+plt.title('Histogram')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+# Box plot
+plt.figure()
+plt.boxplot(random_array, vert=False)
+plt.title('Box Plot')
+plt.xlabel('Value')
+plt.show()
+plt.figure()
+plt.bar(range(len(random_array)),random_array,color='green',width=0.4)
+plt.show()
+
+import numpy as np 
+import pandas as pd 
+df=pd.read_csv('D:\winequalityN.csv')
+print('shape of csv')
+print(df.shape) 
+print('data types')
+print(df.dtypes) 
+print('description of csv')
+print(df.describe())
+print(df.shape[0])
+print(df.shape[1])
+
+

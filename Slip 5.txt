@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Portfolio</title>
+<!-- Bootstrap CSS link -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ <style>
+ 
+ body {
+ padding: 20px;
+ }
+ .section-heading {
+ font-size: 24px;
+ color: #333;
+ margin-top: 20px;
+ }
+ </style>
+</head>
+<body>
+ <div class="container">
+ <!-- Title -->
+ <div class="section-heading">
+ <h1>My Portfolio</h1>
+ </div>
+ <!-- Personal Information -->
+ <div class="section-heading">
+ <h2>Personal Information</h2>
+ </div>
+ <div class="row">
+ <div class="col-md-4">
+ <p><strong>Name:</strong> John Doe</p>
+ <p><strong>Email:</strong> john.doe@example.com</p>
+ <p><strong>Phone:</strong> (123) 456-7890</p>
+ </div>
+ <div class="col-md-4">
+ <p><strong>Location:</strong> City, Country</p>
+ <p><strong>Date of Birth:</strong> January 1, 1990</p>
+ </div>
+ </div>
+ <!-- Educational Information -->
+ <div class="section-heading">
+ <h2>Educational Information</h2>
+ </div>
+ <ul>
+ <li>Bachelor of Science in Computer Science - XYZ University</li>
+ <li>Master of Science in Web Development - ABC University</li>
+ </ul>
+ <!-- Job Profile -->
+ <div class="section-heading">
+ <h2>Job Profile</h2>
+ </div>
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt condimentum
+massa, eu dignissim
+ nulla
+ vehicula at.</p>
+ </div>
+ <!-- Bootstrap JS scripts -->
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+import numpy as np
+import matplotlib.pyplot as plt
+# Generate a random array of 50 integers
+random_array = np.random.randint(0, 100, 60)
+# Line chart
+plt.figure()
+plt.plot(random_array, color='blue')
+plt.title('Line Chart')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.show()
+# Scatter plot
+plt.figure()
+plt.scatter(range(len(random_array)), random_array, color='red')
+plt.title('Scatter Plot')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.show()
+# Histogram
+plt.figure()
+plt.hist(random_array, color='green', edgecolor='black')
+plt.title('Histogram')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+# Box plot
+plt.figure()
+plt.boxplot(random_array, vert=False)
+plt.title('Box Plot')
+plt.xlabel('Value')
+plt.show()
+plt.figure()
+plt.bar(range(len(random_array)),random_array,color='green',width=0.4)
+plt.show()
+
+import numpy as np 
+import pandas as pd 
+df=pd.read_csv('D:\winequalityN.csv')
+print('shape of csv')
+print(df.shape) 
+print('data types')
+print(df.dtypes) 
+print('description of csv')
+print(df.describe())
+print(df.shape[0])
+print(df.shape[1])
+

@@ -1,0 +1,145 @@
+<html>
+<body>
+    <form method="POST" action="position.php">
+    Enter 1st String:<input type="text" name="string1"><br><br>
+    Enter 2nd String:<input type="text" name="string2"><br><br>
+   Enter string for replace:<input type="text" name="string3"><br><br>
+
+   
+
+
+    <input type='radio' name="ch" value=1>A.Find whether the small string appears at the start of the large string. <br>
+    <input type='radio' name="ch" value=2>B.Find the position of the small string in the big string <br>
+    <input type='radio' name="ch" value=3>C.Compare both the string for first n characters, also the comparison should not be case sensitive. <br><br>
+   
+   
+    <input type="submit" name="submit" value="Submit">
+    <input type="reset" value="clear"><br>
+
+    </form>
+</body>
+</html>
+
+
+<?php
+echo"hi";
+if($_POST["submit"] == "Submit")
+{
+ echo"hi";
+$input1= $_POST["string1"];
+$input2= $_POST["string2"];
+$input3= $_POST["string3"];
+echo"<br>First string=".$input1;
+echo"<br>Second String=".$input2;
+echo"<br>String for replace=".$input3;
+$ch=$_POST["ch"];
+
+switch($ch)
+
+        {  
+                case  1:echo"Find whether the small string appears at the start of the large string";
+                        echo $ch;
+                        if(strlen($input1)>strlen($input2))
+                        {
+                                $pos=strpos($input1,$input2);
+                                echo $pos;
+                                if($pos!=0)
+                                echo"<br>String Not present at the start of <br>";
+                                else
+                                echo"<br>String Present at the strat of<br>";
+                        }
+                        else
+                        {
+                                echo"<br>sting lenth 1st less tthan 2nd sting <br>";
+                        }
+                        break;
+                        case 2:echo"<br>Find the position of the small string in the big string ";
+                               
+                                $pos=strpos($input1,$input2);
+                             
+       
+        
+                                if($pos===false)
+                                {
+                                echo"<br>The string 1st was not found in the 2nd string";
+                                }else
+                                {
+                                echo"<br>The string 2nd was found in the string 1st";
+                                echo "<br>smaller string find at position::".$pos;
+                                 
+                                 
+                                }
+                                break;
+                        case 3:
+                                echo"Compare both the string for first n characters, also the comparison should not be case sensitive. ";
+                                $test=strcasecmp($input1, $input2);
+                                if($test==0)
+                                echo"<br>two sting are equal";
+                                else
+                                echo"<br>String 1st grater than 2nd";
+                                echo "<br>$test";
+                       
+           
+                                break;
+                        default:echo"Enter valid case";
+                                break;
+              }
+
+ 
+       
+}
+
+ 
+ ?>
+
+from matplotlib import pyplot as plt
+import numpy as np
+Subject = ['OS', 'FDS', 'Block chain','Android', 'Python', 'CPP']
+marks = [65, 63, 73, 80, 75, 63]
+fig = plt.figure(figsize =(10, 7))
+plt.pie(marks,labels = Subject)
+plt.show()
+
+import numpy as np
+import matplotlib.pyplot as plt
+# Generate a random array of 50 integers
+random_array = np.random.randint(0, 100, 60)
+# Line chart
+plt.figure()
+plt.plot(random_array, color='blue')
+plt.title('Line Chart')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.show()
+# Scatter plot
+plt.figure()
+plt.scatter(range(len(random_array)), random_array, color='red')
+plt.title('Scatter Plot')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.show()
+# Histogram
+plt.figure()
+plt.hist(random_array, color='green', edgecolor='black')
+plt.title('Histogram')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+# Box plot
+plt.figure()
+plt.boxplot(random_array, vert=False)
+plt.title('Box Plot')
+plt.xlabel('Value')
+plt.show()
+plt.figure()
+plt.bar(range(len(random_array)),random_array,color='green',width=0.4)
+plt.show()
+
+import pandas as pd
+df=pd.read_csv('D:\SOCR-HeightWeight.csv')
+print(df)
+df.describe
+df.shape
+df.head(3)
+
+

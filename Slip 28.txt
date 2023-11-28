@@ -1,0 +1,51 @@
+Student.dat file 
+rollno name OS WT DS Python Java CN 
+1 Abd 30 30 25 23 20 45 
+2 xyz 32 33 24 25 25 45 
+PHP FILE 
+<?php 
+$fp=fopen("student.dat","r"); 
+$ar=fscanf($fp,"%s%s%s%s%s%s%s%s",$rl,$nm,$os,$wt,$ds,$py,$jv,$cn); 
+ MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
+echo "<table 
+border=1><tr><th>$rl</th><th>$nm</th><th>$os</th><th>$wt</th><th>$ds</th><t
+h>$py</th><th>$jv</th><th>$cn</th><th>Percentage</tr>"; 
+while(($ar=fscanf($fp,"%s%s%d%d%d%d%d%d",$rl,$nm,$os,$wt,$ds,$py,$jv,$cn))!=f
+alse) 
+{ 
+$total=$os+$wt+$ds+$py+$jv+$cn; 
+$per=$total/6; 
+echo 
+"<tr><th>$rl</th><th>$nm</th><th>$os</th><th>$wt</th><th>$ds</th><th>$py</t
+h><th>$jv</th><th>$cn</th><td>$per</td></tr>"; 
+} 
+echo "</table>";
+?>
+
+import pandas as pd 
+df=pd.DataFrame(columns=['Name','Age','Percentage']) 
+df.loc[0]=['Shirin',19,98] 
+df.loc[1]=['Sanjana',20,97] 
+df.loc[2]=['Tanvi',19,96] 
+df.loc[3]=['Inaara',20,95] 
+df.loc[4]=['Sharon',14,99] 
+df.loc[5]=['Athulya',15,94] 
+df.loc[6]=['Emily',21,93] 
+df.loc[7]=['Mia',22,92] 
+df.loc[8]=['Emma',23,91]
+ df.loc[9]=['Jessica',24,90] 
+df
+
+print("shape\n",df.shape)
+print("datatypes\n",df.dtypes)
+print("columns\n",df.columns)
+print("information of dataframe\t\t",df.info)
+
+df.loc[0] = ['Tata', 'Nexon', 2017]
+df.loc[1] = ['MG', 'Astor', 2021]
+df.loc[2] = 'Tata', 'Nexon', 2017]
+df.loc[3] = ['Hyundai', 'Creta', 2015]
+df.loc[4]= ['Tata', 'Nexon', 2017]
+df["remark"] = None
+#Print the dataframe
+Df

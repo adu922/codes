@@ -1,0 +1,135 @@
+<html>
+<body>
+	<form method="post" action="option.php">
+	enter string:<input type="text" name="string"><br><br>
+
+
+	select separator for:<select name="dropdown">
+	<option value="#">#</option>
+	<option value="!">!</option>
+	<option value="*">*</option>
+	</select><br><br><br>
+
+
+
+	<input type='radio' name="ch" value=1>Splitting string.<br>
+	<input type='radio' name="ch" value=2>Replace all the by separator ..<br>
+	<input type='radio' name="ch" value=3>Find the last word in string..<br><br>
+
+	
+	<input type="submit" value="submit">
+	<input type="reset" value="clear"><br>
+	</form>
+</body>
+</html>
+
+
+Php code
+<?php
+$inputstr=$_POST['string'];
+//echo"sting is".$inputstr"<br>";
+
+
+$chswitch=$_POST["ch"];
+$chdropdown=$_POST['dropdown'];
+//echo"selector is".$chdropdown;
+
+if($chswitch && $chdropdown)
+{
+
+switch ($chswitch) 
+ { 
+
+case 1:
+ echo "Splitting string is <br>";
+	$str = $inputstr;
+	//echo"String is:".$str;
+	$delimiter =$chdropdown;
+	//echo"delimeter is:".$chdropdown;
+	$words = explode($delimiter, $str);
+
+	foreach ($words as $word) 
+	{
+    	echo $word;
+    	
+	echo "<br>";
+	}
+	break;
+
+case 2:
+    echo "Replace all the by separator<br>";
+   $str = $inputstr;
+   //echo $str ;
+   $delimiter =$chdropdown;
+   //echo $delimiter;
+   $word=substr_replace($str,$delimiter,5);
+  echo $word;
+   
+break;
+
+case 3:
+ echo "Find the last word in string";
+    $str = $inputstr;
+    //$delimiter =$chdropdown;
+
+    echo strstr("$str","#");
+break;
+
+default:
+  echo "Input did not match with any case";
+
+  }
+}
+?>
+
+from matplotlib import pyplot as plt
+import numpy as np
+Subject = ['OS', 'FDS', 'Block chain','Android', 'Python', 'CPP']
+marks = [65, 63, 73, 80, 75, 63]
+fig = plt.figure(figsize =(10, 7))
+plt.pie(marks,labels = Subject)
+plt.show()
+
+import numpy as np
+import matplotlib.pyplot as plt
+# Generate a random array of 50 integers
+random_array = np.random.randint(0, 100, 60)
+# Line chart
+plt.figure()
+plt.plot(random_array, color='blue')
+plt.title('Line Chart')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.show()
+# Scatter plot
+plt.figure()
+plt.scatter(range(len(random_array)), random_array, color='red')
+plt.title('Scatter Plot')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.show()
+# Histogram
+plt.figure()
+plt.hist(random_array, color='green', edgecolor='black')
+plt.title('Histogram')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+# Box plot
+plt.figure()
+plt.boxplot(random_array, vert=False)
+plt.title('Box Plot')
+plt.xlabel('Value')
+plt.show()
+plt.figure()
+plt.bar(range(len(random_array)),random_array,color='green',width=0.4)
+plt.show()
+
+import pandas as pd
+df=pd.read_csv('D:\SOCR-HeightWeight.csv')
+print(df)
+df.describe
+df.shape
+df.head(3)
+
+

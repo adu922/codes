@@ -1,0 +1,134 @@
+<html>
+<head>
+<title> Factorial Program</title>
+</head>
+<body>
+<form method="POST" action="fact.php">
+<label>Enter a number1</label>
+<input type="text" name="number1" /><br>
+
+<label>Enter a number2</label>
+<input type="text" name="number2" /><br>
+
+<input type='radio' name="ch" value=1>Find mod of the two numbers.<br>
+<input type='radio' name="ch" value=2>Find the power of first number raised to the second.<br>
+<input type='radio' name="ch" value=3>Find the sum of first n number.<br>
+<input type='radio' name="ch" value=4>Find factorial of number.<br>
+<input type="submit" name="submit" value="Submit" />
+<input type=reset value=clear>
+</form>
+</body>
+</html>
+
+
+Php
+<?php
+// example to demonstrate factorial of a number using form
+if($_POST["submit"] == "Submit")
+ {
+$input1 = $_POST["number1"];
+$input2 = $_POST["number2"];
+$ch=$_POST["ch"];
+
+switch($ch)
+{
+case 1:
+	//echo"mod of number";
+
+
+	function mod_Function($input1,$input2)
+	{
+		
+   			$divides=(int)($input1/$input2);
+			$result= $input1-$input2*$divides;
+			return $result;
+   			
+		
+	}
+	
+	
+	$result = mod_Function($input1,$input2); 
+		echo"mod of two number ".$result;
+
+	break;
+case 2:
+	echo"power";
+	function power_Function($input1,$input2)
+	 {
+  		$finalnum = 1;
+  		$n1 = $input2;
+  		while($n1 > 0)
+		{
+    		$finalnum = $finalnum * $input1;
+    		$n1--;
+		}
+	
+
+		return $finalnum;
+  	}
+	$result =power_Function($input1,$input2);
+  	echo "1st raised to the power 2nd =" .$result;
+
+	break;
+
+case 3://echo"sum of n";
+
+
+
+
+function sum_Function($input1)
+{
+$sum = $input1*($input1+1)/2;
+return $sum;
+}
+
+$result = sum_Function($input1); 
+		echo"sum of n number is ".$result;
+	break;
+case 4:
+	//echo"factorial of Number";
+	function Factorial_Function($input1) 
+	{
+	
+
+	//$input1 = $number1;
+	$fact=1;
+	//iterating using for loop
+	for($i=$input1; $i>=1;$i--) 
+	{
+	$fact = $fact * $i;
+	}
+	return $fact;
+	}
+
+		$result = Factorial_Function($input1); 
+		echo"Factorial of the number is ".$result;
+	break;
+default:echo"no mathch found";
+	break;
+}
+}
+?>
+
+
+import pandas as pd 
+import numpy as np 
+df = pd.read_csv('')
+names=['Height', 'Weight']) 
+
+column_mean = df.mean(axis=0) 
+print("Column-wise mean:") 
+print(column_mean) 
+
+column_median = df.median(axis=0) 
+print("\nColumn-wise median:") 
+print(column_median)
+
+from math import sqrt
+def manhattan(a, b):
+    return sum(abs(val1-val2) for val1, val2 in zip(a,b))
+
+A = [2, 4, 4, 6]
+B = [5, 5, 7, 8]
+
+manhattan(A, B)

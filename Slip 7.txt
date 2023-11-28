@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Table</title>
+ <style>
+ table{
+ border-collapse: collapse;
+ text-align: center;
+ } 
+ h5 {
+ color:white;
+ }
+ </style>
+</head>
+<body>
+ <table border="1px solid black">
+<tr>
+ <td rowspan="3" bgcolor="black"><h5>HOME<h5></td>
+ <td rowspan="3" bgcolor="grey">JAVA    HTML    CSS</td>
+ </tr>
+</table>
+</body>
+</html>
+
+import numpy as np
+import pandas as pd
+ 
+df = pd.read_csv("D:\Iris.csv")
+df
+df['Species'].unique()
+from sklearn import preprocessing
+  
+
+label_encoder = preprocessing.LabelEncoder()
+  
+df['Species']= label_encoder.fit_transform(df['Species'])
+  
+df['Species'].unique()

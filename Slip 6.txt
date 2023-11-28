@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header {
+  background-color: #666;
+  padding: 18px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  height: 340px; 
+  background: #ccc;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; 
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Layout Float</h2>
+
+<header>
+  <h2>Header information</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>London</h1>
+    <p>.</p>
+    <p>.</p>
+  </article>
+</section>
+
+<footer>
+  <p>This is Footer information</p>
+</footer>
+
+</body>
+</html>
+
+import matplotlib.pyplot as plt
+import pandas as pd
+df=pd.read_csv('')
+df.isnull().sum()
+df['SepalLengthCm'].fillna(df['SepalLengthCm'].mean().inplace='True')
+df
+
+import matplotlib.pyplot as plt
+import numpy as np
+name=['']
+salary=['']
+plt.plot(name,salary,color='green')
+plt.title()
+plt.xlabel()
+plt.show()
+
+import matplotlib.pyplot as plt
+import pandas as pd
+df=pd.read_csv('')
+print("First ten rows\n",df.head(10))
+print("Last ten rows\n",df.tail(10))
+print("Random\n,df.sample(20))
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Company Information</title>
+<style>
+ #companyName {
+ background-color: green;
+ color: red;
+ }
+ h1 {
+ font-size: 36px;
+ font-family: 'Comic Sans MS', cursive;
+ }
+ p {
+ color: blue;
+ }
+ </style>
+</head>
+<body>
+ <div id="companyName">
+ <h1>Company Name</h1>
+ </div>
+ <p>This is a description of the company. It is displayed in blue color in a paragraph.</p>
+</body>
+</html>
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+df = pd.read_csv('')
+ 
+sns.boxplot(x='SepalLengthCm', data=df)
+plt.show()
+sns.boxplot(x='SepalWidthCm', data=df)
+plt.show()
+sns.boxplot(x='PetalLengthCm', data=df)
+plt.show()
+sns.boxplot(x='PetalLengthCm', data=df)
+plt.show()
+
+import pandas as pd
+data = pd.read_csv('D:\winequalityN.csv')
+ print(data.describe())

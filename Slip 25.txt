@@ -1,0 +1,75 @@
+<html lang="en"> 
+<head> 
+ <title>Document</title> 
+</head> 
+<body> 
+ <form action="slip25.php" method="get"> 
+ Enter File name to read <input type="text" name="fname1"><br> 
+ <input type="radio" name="op" value="1">Display Type of File<br> 
+ <input type="radio" name="op" value="2">Display Modification Time<br> 
+ <input type="radio" name="op" value="3">Display File Size<br> 
+ <input type="radio" name="op" value="4">Delete File<br> 
+ <input type="submit" value="Copy"> 
+</form> 
+</body> 
+</html> 
+<?php 
+$fp=$_GET['fname1']; 
+$op=$_GET['op']; 
+switch($op) 
+{ 
+ case 1: 
+ echo basename($fp); 
+ break; 
+ case 2: $mtime=stat($fp); 
+ echo Date("d/M/Y h:m:s",$mtime['mtime']); 
+ break; 
+ case 3:echo filesize($fp); 
+ break; 
+ case 4:unlink($fp); 
+ echo "File deleted"; 
+ break; 
+}
+?>
+from matplotlib import pyplot as plt
+import numpy as np
+Subject = ['OS', 'FDS', 'Block chain','Android', 'Python', 'CPP']
+marks = [65, 63, 73, 80, 75, 63]
+fig = plt.figure(figsize =(10, 7))
+plt.pie(marks,labels = Subject)
+plt.show()
+
+import numpy as np
+import matplotlib.pyplot as plt
+# Generate a random array of 50 integers
+random_array = np.random.randint(0, 100, 60)
+# Line chart
+plt.figure()
+plt.plot(random_array, color='blue')
+plt.title('Line Chart')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.show()
+# Scatter plot
+plt.figure()
+plt.scatter(range(len(random_array)), random_array, color='red')
+plt.title('Scatter Plot')
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.show()
+# Histogram
+plt.figure()
+plt.hist(random_array, color='green', edgecolor='black')
+plt.title('Histogram')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+# Box plot
+plt.figure()
+plt.boxplot(random_array, vert=False)
+plt.title('Box Plot')
+plt.xlabel('Value')
+plt.show()
+plt.figure()
+plt.bar(range(len(random_array)),random_array,color='green',width=0.4)
+plt.show()

@@ -1,0 +1,57 @@
+<html> 
+<form action=slip19.php method=get> 
+Enter a Sentence<input type=text name=t1><br> 
+Enter a word<input type=text name=t2><br> 
+Enter position<input type=text name=t3><br> 
+Enter number of characters to remove<input type=text name=t4><br> 
+<input type=submit value="Display Result"> 
+</form> 
+</html> 
+<?php 
+$st=$_GET['t1']; 
+$wd=$_GET['t2']; 
+$ps=$_GET['t3']; 
+$nr=$_GET['t4']; 
+$dup_st=$st; 
+$str=substr_replace($st,"",$ps,$nr); 
+echo "<br>$str<br>"; 
+$str=substr_replace($st,$wd,$ps,0); 
+echo "<br>$str<br>"; 
+$str=substr_replace($st,$wd,$ps,strlen($wd)); 
+echo "<br>$str<br>"; 
+?> 
+
+import pandas as pd 
+df=pd.DataFrame(columns=['Name','Age','Percentage']) 
+df.loc[0]=['Shirin',19,98] 
+df.loc[1]=['Sanjana',20,97] 
+df.loc[2]=['Tanvi',19,96] 
+df.loc[3]=['Inaara',20,95] 
+df.loc[4]=['Sharon',14,99] 
+df.loc[5]=['Athulya',15,94] 
+df.loc[6]=['Emily',21,93] 
+df.loc[7]=['Mia',22,92] 
+df.loc[8]=['Emma',23,91]
+ df.loc[9]=['Jessica',24,90] 
+df
+
+
+import numpy as np 
+import pandas as pd 
+df=pd.read_csv('D:\winequalityN.csv')
+print('shape of csv')
+print(df.shape) 
+print('data types')
+print(df.dtypes) 
+print('description of csv')
+print(df.describe())
+print(df.shape[0])
+print(df.shape[1])
+
+df.loc[0] = ['Tata', 'Nexon', 2017]
+df.loc[1] = ['MG', 'Astor', 2021]
+df.loc[2] = 'Tata', 'Nexon', 2017]
+df.loc[3] = ['Hyundai', 'Creta', 2015]
+df.loc[4]= ['Tata', 'Nexon', 2017]
+df["remark"] = None
+Df

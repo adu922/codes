@@ -1,0 +1,52 @@
+<html> 
+<body> 
+<form method=get action="slip 23.php"> 
+<input type=radio name=ch value=1> Insert in queue<br> 
+Enter No to insert<input type=text name=n1><br> 
+<input type=radio name=ch value=2> Delete in queue<br> 
+<input type=radio name=ch value=3> Display<br> 
+<input type=submit> 
+</form> 
+</body> 
+</html>
+<?php 
+$stk=array(1,2,3,4,5); 
+$ch=$_GET['ch']; 
+else if($ch==1) 
+{ 
+ echo "Insert element in queue <br>"; 
+ $n4=$_GET['n4']; 
+ array_push($stk,$n4);//Insert element at last 
+ print_r($stk); 
+} 
+else if($ch==2) 
+{ 
+ echo "Delete element from queue. <br>"; 
+ $res=array_shift($stk); //at begining 
+ echo "Deleted element is:".$res; 
+} 
+else if($ch ==3) 
+{ 
+ echo"Given array is: <br>"; 
+ print_r($stk); 
+} 
+?>
+import numpy as np
+dataset = np.array([1.0, 2.0, 3.0, 3.0, 3.0, 2.0, 1.0])
+standardized_dataset = (dataset - np.average(dataset)) / (np.std(dataset))
+print(standardized_dataset)
+
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+dataset = np.array([1.0, 12.4, 3.9, 10.4]).reshape(-1, 1)
+scaler = MinMaxScaler(feature_range=(0, 1.5))
+scaler.fit(dataset)
+normalized_dataset = scaler.transform(dataset)
+print(normalized_dataset)
+
+import sklearn
+import numpy as np
+from sklearn import preprocessing
+X = [[ 0.4, -1.8, 2.9],[ 2.5, 0.9, 0.3],[ 0., 1., -1.5],[ 0.1, 2.9, 5.9]]
+Binarized_Data = preprocessing.Binarizer(threshold=0.5).transform(X)
+print("\nThe Binarized data is:\n", Binarized_Data)

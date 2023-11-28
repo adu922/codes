@@ -1,0 +1,44 @@
+<html>
+<head>
+<title><center>my city</center></title>
+</head>
+<body bgcolor="pink">
+<font size="7" face="arial" color="blue"><center>Pune,Maharashtra</font><br>
+
+<font size="6" face="arial" color="pink"<b>landmarks</b></font><br>
+<font size="5" face="arial" color="yellow"<b>Shanivar wada</b></font><br>
+<font size="4" face="arial" color="red"<b>empharence mall</b></font><br>
+<font size="3" face="arial" color="blue"<b>ganesh tekadi</b></font><br>
+
+<marquee behaviour="slide"> wonderful place to visit</marquee>
+<marquee behaviour="slide">pune is best city for education</marquee>
+<img src=" " alt="image cannot be displayed">
+</center>
+</body>
+
+</html>
+
+import matplotlib.pyplot as plt
+name = ['Poonam','Pooja','Akshay','Yogita','Preeti','Kavita','Meena']
+salary = [50000,65000,70000,91000,67000,73000,83000]
+plt.plot(name, salary, color='Blue')
+plt.xlabel('name')
+plt.ylabel('salary')
+plt.title('name and salary')
+plt.show()
+
+import pandas as pd
+df = pd.read_csv('')
+df
+df.isnull().sum()
+df['SepalLengthCm'].fillna(df['SepalLengthCm'].mean(), inplace = True)
+df
+
+import pandas as pd
+df=pd.read_csv('')
+print(df)
+print("first ten rows of the dataset\n",df.head(10))
+print("last ten rows of the dataset\n",df.tail(10))
+print("random 10 entries from data set\n",df.sample(20))
+
+

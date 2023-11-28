@@ -1,0 +1,26 @@
+<html> 
+<head> 
+<link rel=stylesheet href="bootstrap.min.css"> 
+</head> 
+<body> 
+<form > 
+<input type= button value="primary" class="btn btn-primary"> 
+<input type= button value="warning" class="btn btn-warning"> 
+<input type= button value="secondary"class="btn btn-Secondary"> 
+<input type= button value="success" class="btn btn-success"> 
+<input type= button value="info" class="btn btn-info"> 
+<input type= button value="danger" class="btn btn-danger"> 
+</body> 
+</html>
+
+import pandas as pd
+import matplotlib.pyplot as plt
+iris = pd.read_csv('D:\Iris.csv')
+ax=plt.subplots(1,1,figsize=(10,8))
+iris['Species'].value_counts().plot.pie(explode=[0.1,0.1,0.1],autopct='%1.1f%%',shadow=True,figsize=(10,8))
+plt.title("Iris Species %")
+plt.show()
+
+import pandas as pd
+data = pd.read_csv('D:\winequalityN.csv')
+ print(data.describe())
